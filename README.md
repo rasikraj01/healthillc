@@ -1,6 +1,8 @@
 # Healthillc
 
-<code>pip3 install -r requirements.txt</code>
+Create a virtualenv
+
+Then run : <code>pip3 install -r requirements.txt</code>
 
 Make sure you have postgres installed.
 
