@@ -1,0 +1,36 @@
+h2{
+    padding: 2rem 0 1rem;
+    font-weight: 200;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3rem;
+}
+h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0rem 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+img{
+    padding: 5rem 0 0;
+    height: 17rem;
+}
+h3 a{
+    color: #02b76f;
+}
+footer{
+    bottom: 0;
+    position: fixed;
+}
+  @media (max-width: 1440px) {
+      footer{
+          position: relative;
+      }
+  }
+  @media (max-width: 425px) {
+      img{
+          height: 10rem;
+      }
+      footer{
+          position: absolute;
+      }
+  }

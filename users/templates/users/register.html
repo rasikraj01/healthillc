@@ -1,0 +1,30 @@
+{% extends 'about/base.html' %}
+{% load static %}
+
+
+{% block metafollow %}
+<meta name="robots" content="index, follow">
+{% endblock metafollow %}
+
+{% block tilte %}Sign Up{% endblock tilte %}
+
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+<link rel="stylesheet" href="{% static 'users/css/register.css' %}">
+{% endblock style %}
+    
+{% block content %}
+<div class="container col-1">
+    <img src="{% static 'about/imgs/logo.png'%}" alt=""> 
+    <div class="form-container">
+            <h1>CREATE ACCOUNT</h1>
+    
+            <form method='POST' class="form-register">{% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="Sign Up">
+            </form>
+            <h3>Already have an account ?<a href="{% url 'login' %}">Sign In </a> </h3> 
+    </div>
+</div>
+{% endblock %}

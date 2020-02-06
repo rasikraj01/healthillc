@@ -1,0 +1,39 @@
+{% extends 'about/base.html' %}
+{% load static %}
+
+
+{% block metafollow %}
+<meta name="robots" content="noindex, nofollow">
+{% endblock metafollow %}
+
+{% block tilte %}DashBoard{% endblock tilte %}
+
+{% block style %}
+    
+<link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+<link rel="stylesheet" href="{% static 'users/css/dashboard.css' %}">
+
+{% endblock style %}
+    
+{% block content %}
+    <div class="container col-1">
+            <h1>DASHBOARD</h1>
+            {% if request.user.profile.order_Status == 'SUCCESS' %}
+                <h2>
+                    Current Plan : {{current_plan}}<br>
+                    Expiry Date : {{expiry_date}}<br>
+                    <span> Please do not buy another plan before this one expires.</span>
+                </h2>
+            {% else %}
+                <h2>You have no active Plan. <a href=" {% url 'plans' %} ">Join Now</a></h2>
+            {% endif %}
+            
+            <h3>YOUR PROFILE</h3>
+            <p class="info">Please update your Profile before joining any plan</p>
+            <form method="POST">
+                {% csrf_token %}
+            {{form_profile.as_p}}
+            <input type="submit" value="Update Profile">
+            </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,367 @@
+.hero{
+    height: 100vh;
+    background: #11998e; 
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e); 
+    background: linear-gradient(to right, #38ef7d, #11998e);
+}
+.container{
+    width: 70vw;
+    margin: auto;
+}
+.col-2{
+    padding: 20vh 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+.hero .content p{
+    grid-column: 1/2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color : white;
+    font-size: 6rem;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.content span{
+    font-size: 4rem;
+}
+.hero-button{
+    width: 120px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-style: none;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    color: #FFF;
+    background:#7E57C2;
+    border-radius: 10px;
+  }
+  .hero-button:hover{
+      cursor: pointer;
+  }
+.content .thin{
+    font-size: 1.1rem;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.graphic{
+    grid-column: 2/3;
+}
+.graphic img{
+    width: 40vw;
+}
+.about-company{
+    width: 100vw;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.col-1{
+    text-align: center;
+    padding: 3rem;
+}
+.about-company .col-1{
+    padding-top : 5rem;
+}
+.about-company .col-1 h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.4rem;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    padding-bottom: 2rem;
+}
+.about-company .col-1 img{
+    grid-column: 1/2;
+    width: 20vw;
+    min-width: 200px;
+    padding-bottom: 1rem;
+}
+.about-company .info p{
+    font-size: 1.5em;
+    padding: .25rem;
+    text-align: center;
+}
+
+.about-company .info-1 {
+    grid-column: 1/3;
+    font-size: 1.5em;
+    text-align: center;
+}
+.about-company .info-1 p{
+    padding: .25rem;
+}
+.about-company h3{
+
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    /* text-align: left; */
+    padding: 3.5rem 0 1.5rem; 
+}
+.about-company h3 span{
+    font-weight: 600;
+}
+.getting-started .col-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5vw; 
+
+}
+.getting-started{
+    text-align: center;
+    background: #29cd8438;
+}
+.getting-started h2, 
+.how-it-works h2,
+.testimonials h2{
+    grid-column: 1/4;
+    font-size : 3rem;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px 0 60px;
+}
+.step{
+    padding-bottom: 70px;
+}
+.step h3{
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+.step .desc{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.illustration{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin: auto;
+    background: rgba(17, 153, 142, .5);
+}
+.illustration img{
+    height: 150px;
+    width: 150px;
+    bottom: 0;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.fluid-container {
+    width: 100vw;
+}
+.how-it-works h2{
+    padding-top: 70px;
+    text-align: center;
+}
+.how-it-works h2 span{
+    font-weight: 600;
+}
+.how-it-works ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+    list-style: none;
+    padding: 2rem 0;
+    background: url('../imgs/bg-hiw.svg') no-repeat;
+    background-color: rgba(255,255,255,0.5);
+    background-position: 50% 0%; 
+    background-blend-mode: lighten;
+    background-size: cover;
+    backface-visibility: hidden;
+}
+.how-it-works ul .bg-left{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.how-it-works ul .bg-right{
+    grid-column: 5/6;
+
+}
+.how-it-works ul li{
+    width: 100%;
+    grid-column: 3/4;
+    margin: auto;
+    display: flex;
+    padding-bottom: 4rem;
+
+    height: inherit;
+    align-items: center;
+}
+.how-it-works ul li .circle{
+    min-width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background: #38ef7d;
+    border-radius: 80px; 
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+.how-it-works ul li .item{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+}
+.testimonials{
+    background: #02b76f;
+}
+.testimonials h2{
+    text-align: center;
+    font-weight: 600;  
+    color: white;
+}
+.slides{
+    width: 60vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+    padding: 0 0 5rem 0;
+}
+.slide {
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+    text-align: left;
+    transition: all .2s;
+}
+.slide:hover{
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.inner-slide{
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.slide blockquote{
+    font-size: 1.3rem;
+    padding: 15px;
+    font-weight: 300;
+    color :#363636;
+    z-index: 0;
+}
+.slide h5{
+    font-style: italic;
+    margin-top: 30px;
+    text-align: right;
+    color: #333333;
+    font-size: 1.2rem;
+}
+.graphic-tab{
+    display: none;
+}
+@media (max-width: 1024px) {
+    .hero .content p{
+        font-size: 4rem;
+    }
+    .content span{
+        font-size: 3rem;
+    }
+    .col-2{
+        padding-top: 5rem;
+        display: block;
+    }
+    .graphic-tab{
+        display: block;
+        width: 50vw;
+        margin: auto;
+        justify-content: center;
+    }
+    .graphic-tab img{
+        width: 100%;
+    }
+    .graphic{
+        display: none;
+    }
+    .hero .content{
+        text-align: center;
+    }
+    .content .thin{
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .illustration{
+        width: 150px;
+        height: 150px;
+    }
+    .illustration img{
+        width: 100px;
+    }
+    .step .desc{
+        font-size: 1rem;
+    }
+    .how-it-works ul{
+        background: none;
+        grid-template-columns: 1fr 6fr 1fr;
+    }
+
+    .how-it-works ul li{
+        align-content: center;
+        grid-column: 2/3;
+    }
+    .how-it-works ul li .item{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+@media (max-width: 425px) {
+    .hero{
+        height: fit-content;
+        min-height: 100vh;
+    }
+    .getting-started .col-3{
+        display: block;
+    }
+    .illustration{
+        width: 200px;
+        height: 200px;
+    }
+    .illustration img{
+        width: 150px;
+    }
+    .step .desc{
+        font-size: 1.3rem;
+    }
+    .testimonials .container{
+        width: 80vw;
+    }
+    .slides{
+        width: 80vw;
+    }
+    .slide blockquote{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .about-company h3{
+        font-size: 2rem;
+    }
+    .about-company .info p, 
+    .about-company .info-1 {
+        font-size: 1.25rem;
+    }
+
+    .testimonials h2,  
+    .how-it-works h2, 
+    .about-company .col-1 h2 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,134 @@
+.box{
+    padding-top: 10rem;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    padding-bottom: 2rem;
+}
+h2{
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 200;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.col-2{
+    padding: 0;
+    padding-top : 5rem;
+    grid-gap: 2rem;
+}
+.plans{
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom : 10rem;
+}
+.plans h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #5E35B1;
+    padding-bottom: 1rem;
+}
+.plans h4{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.plan{
+    border: 2px solid #7E57C2;
+    border-radius: 10px;
+    padding: 1rem 1rem .5rem;
+    box-shadow:0 5px 6px rgba(126, 87, 194, .2);
+    transition: all .2s;
+}
+.plan:hover{
+    /* cursor: pointer; */
+}
+.plan a{
+    width: 120px;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #FFF;
+    background:#7E57C2;
+    border-radius: 10px;
+    transition: all 0.2s;
+    outline: none;
+    transform-origin: 50% 50%;
+}
+.plan a:hover{
+    cursor: pointer;
+    /* border-radius: 0px; */
+    background: #6a4aa2;
+}
+.plan ul{
+    list-style: none;
+    padding-bottom: 1rem;
+}
+.plan ul li{
+    padding: .15rem 0;
+
+}
+.plan ul li i{
+    color: #7E57C2;
+    padding-right: .4rem;
+}
+.pnd{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding-bottom: 20px; 
+    align-items: center;
+}
+.join-btn {
+    min-width: 120px;
+}
+.pnd p{
+    font-size: 1.6rem;
+}
+.list-head{
+    padding-top: .75rem;
+    font-size:1.25rem;
+}
+@media (max-width: 1440px) {
+    .plan a{
+        padding: 15px 9px;
+    }
+  }
+
+@media (max-width: 1024px) {
+    .plans{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 768px){
+      .container h1{
+          font-size: 3rem;
+      }
+      .container h2{
+          font-size: 1.5rem;
+      }
+  }
+  @media (max-width: 425px){
+    .container h1{
+        font-size: 2.5rem;
+    }
+    .container h2{
+        font-size: 1rem;
+    }
+    .pnd{
+        display: block;
+    }
+    .join-btn{
+        width: 89px;
+        margin: 20px auto 0 ;
+    }
+
+    .plan h3, .plan h4{
+        text-align: center;
+    }
+}

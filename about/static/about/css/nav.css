@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,800i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600&display=swap');
+body{
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+nav{
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e); 
+    background: linear-gradient(to right, #38ef7d, #11998e);
+
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    font-family: 'Open Sans', sans-serif;
+}
+.scrolled{
+    box-shadow:0 5px 6px #00ae683d;
+}
+.title{
+    position: absolute;
+    left: 5rem;
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+}
+.title img{
+    height: 50px;
+    line-height: 50px;
+    padding: 5px 10px;
+}
+.title h1{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 60px;
+    color: white;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+}
+.title h1 a{
+    text-decoration: none;
+    color: white;
+}
+nav ul{
+    position: absolute;
+    right: 5rem;
+    color : white;
+}
+nav ul li{
+    display: inline;
+    line-height: 60px;
+    padding: 10px 10px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    cursor: pointer;
+}
+.signup {
+    background: #7E57C2;
+    border-radius: 7px;
+}
+.container{
+    width: 70vw;
+    margin: auto;
+}
+.col-2{
+    padding: 20vh 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.col-1{
+    text-align: center;
+    padding: 3rem;
+}
+
+.col-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5vw; 
+}
+.icon{
+    display: none;
+}
+@media (max-width: 768px) {
+    .title{
+        left: 2rem;
+    }
+    nav ul{
+        right: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .icon{
+        display: block;
+        right: 2rem;
+        top: 1rem;
+        height: 60px;
+        line-height: 60px;
+        font-size: 2rem;
+        position: absolute;
+    }
+    .icon a{
+        color: #ffffff;
+    }
+    .title{
+        left: auto;
+    }
+    nav{
+        width: 100%;
+        justify-content: center;
+        font-weight: 500;
+    }
+    nav ul{
+        background: linear-gradient(to right, #38ef7d, #11998e);
+        width: 100vw;
+        top:60px;
+        display: block;
+        right: 0;
+        padding-bottom: 10px;
+        display: none;
+    }
+    nav ul li{
+        display: block;
+        line-height: 15px;
+        margin-left: 20px;
+    }
+    .signup{
+        max-width: 70px;
+    }
+    .responsive{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
+}

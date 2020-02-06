@@ -1,0 +1,125 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#38ef7d">
+        <meta name="msapplication-navbutton-color" content="#38ef7d">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#38ef7d">
+
+        <meta name="description" content="Healthillc Fitness is a personal coaching initiative by Deepanshu Gaur to help people 
+        transform and live a healthy lifestyle by providing low cost plans so that people who can't afford expensive coaching but 
+        want high quality personal coaching can still change themselves and not make money as an excuse.">
+        <meta name="keywords" content="deepanshu, gaur, healthillc, healthillc fitness, online fitness training, 
+        online transformation coaching, fitness YouTuber,fitness coach online, personal coaching , 
+        online personal coaching, fitness coaching, transformation coach, personal training, personal 
+        training online, delhi, lose fat, gain muscle, fat to fit, online coaching, healthy lifestyle,
+        disease, nutrition tips, gym, bodybuilding, fat loss expert, nutrition coach, fitness coach">
+
+        <meta property="og:image" content="{% static 'about/imgs/logo-home.png' %}">
+        <meta property="og:title" content="Healthillc Fitness">
+        <meta property="url" content="https://www.healthillc.com">
+        <meta property="og:description" content=" Healthillc Fitness is an online fitness personal 
+        coaching initiative to help people change themselves at a cost that almost everyone can afford.">
+        
+        {% block metafollow %}
+        {% endblock metafollow %}
+
+        <link rel="shortcut icon" href="{% static 'about/imgs/favicon.png' %}">
+        <title>
+            Healthillc | {% block tilte %}Home{% endblock tilte %}
+        </title>
+        <link rel="stylesheet" href="{% static 'about/css/nav.css' %}">
+        <link rel="stylesheet" href="{% static 'about/css/footer.css' %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
+        crossorigin="anonymous">
+        {% block style %}
+        {% endblock style %}
+    </head>
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5d15247a36eab97211199768/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    
+    <body>
+      <nav>
+        <div class="title">
+             <img src="{% static 'about/imgs/nav-logo.png' %} " alt="">
+             <h1><a href="{% url 'home' %}">HEALTHILLC</a></h1>
+         </div>
+       <ul id="topnav" class="topnav">
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li><a href="{% url 'plans' %}">Plans</a></li>
+        <li><a href="{% url 'dashboard' %}">{{user.username}}</a></li>
+        <li class="signup"><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}        
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Me</a></li>
+        <li><a href="{% url 'plans' %}">Plans</a></li>  
+        <li class="login"><a href="{% url 'login' %}">Login</a></li>
+        <li class="signup"><a href="{% url 'register' %}">Join Now</a></li>
+        {% endif %}
+       </ul>
+
+       <div class="icon">
+          <a href="javascript:void(0);"  onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+      </div>
+     </nav>
+        {% block content %}
+        {% endblock content %}
+    
+<footer>
+        <div class="container col-3">
+          <div class="sitemap">
+            <ul>
+              <li><a href="">SITEMAP</a></li>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About Me</a></li>
+              <li><a href="{% url 'plans' %}">Plans</a></li>
+            </ul>
+          </div>
+          <div class="policy">
+            <ul>
+              <li><a href="">LEGAL</a></li>
+              <li><a href="{% url 'tnc' %}">Terms and Conditions</a></li>
+              <li><a href="{% url 'privacy' %}">Privacy & Refund Policy</a></li>
+            </ul>
+          </div>
+          <div class="contact">
+            <h5>CONTACT US: </h5>
+            <h5 class="mail">
+              <a href="">healthillc@gmail.com</a>
+            </h5>
+            <ul>
+              <li><a href="https://www.facebook.com/healthillc/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="https://www.instagram.com/healthillc/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCK_x16m7ilDd80C2iv2s5NA" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>    
+    </body>
+
+<!-- <script src="https://kit.fontawesome.com/00cbc46fa1.js"></script> -->
+<script>
+function myFunction() {
+  var x = document.getElementById("topnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</html>

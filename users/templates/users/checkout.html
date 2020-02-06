@@ -1,0 +1,69 @@
+{% extends 'about/base.html' %}
+{% load static %}
+
+{% block metafollow %}
+<meta name="robots" content="noindex, nofollow">
+{% endblock metafollow %}
+
+
+{% block tilte %}Checkout{% endblock tilte %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+<link rel="stylesheet" href="{% static 'users/css/checkout.css' %}">
+{% endblock style %}
+
+{% block content %}
+<div class="container col-1">
+<div class="form-container">
+        <h1>CHECKOUT</h1>
+        <div class="details">
+                <p>
+                PLAN : <span>{{selected_plan.name}}</span>
+                </p>
+                <p>
+                COST : <span>{{selected_plan.cost}}{{order_currency}}</span>
+                </p>
+                <p>
+                DURATION : <span>{{selected_plan.duration}} weeks</span>
+                </p>
+                        
+        </div>  
+        <form method="GET" action="{% url 'checkout' %}">
+                <input type="hidden" name="planid" value="{{selected_plan.plan_id}}">
+                
+                {% if coupon %}
+                        {% if coupon.validity %}
+                        {% else %}
+                                <p class="invalid">Invalid Coupon</p>
+                        {% endif %}
+                {% endif %}
+                        
+                {% if coupon.coupon_id %}
+                        {% if coupon.status %}
+                                <p class="applied">Coupon Applied</p>
+                        {% else %}
+                                <p class="expired">Coupon Expired</p>
+                        {% endif %}
+                                
+                        <input type="text" name="coupon" placeholder="ENTER COUPON CODE" value="{{coupon.coupon_id}}">
+        
+                {% else %}
+                        <input type="text" name="coupon" placeholder="ENTER COUPON CODE">
+                {%endif%}
+                
+                <input type="submit" value="REDEEM">
+        </form>
+        
+        <!-- 
+        // international payments
+        // response authentication 
+        -->
+        
+        <form action="" method="POST">{% csrf_token %}
+                <input type="submit" value="Proceed to Pay">
+        </form>
+</div>
+</div>
+{% endblock content %}
+        

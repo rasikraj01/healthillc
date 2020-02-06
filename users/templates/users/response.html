@@ -1,0 +1,73 @@
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#38ef7d">
+  <meta name="msapplication-navbutton-color" content="#38ef7d">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#38ef7d">
+
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="{% static 'about/imgs/favicon.png' %}">
+  
+  <title>Healthillc | Transcation Response</title>
+  
+  <link rel="stylesheet" href="{% static 'users/css/response.css' %}">
+</head>
+<body>
+  <nav>
+      <div class="title">
+          <img src="{% static 'about/imgs/nav-logo.png' %} " alt="">
+          <h1>HEALTHILLC</h1>
+      </div>
+  </nav>
+  <div class="container">
+    <h2>Transaction Details</h2>
+    <table>
+        <tr>
+            <td>Order ID</td>
+            <td>{{orderId}}</td>
+          </tr>
+          <tr>
+            <td>Order Amount</td>
+            <td>{{orderAmount}}</td>
+          </tr>
+          <tr>
+            <td>Reference ID</td>
+            <td>{{referenceId}}</td>
+          </tr>
+          <tr>
+            <td>Transaction Status</td>
+            <td>{{txStatus}}</td>
+          </tr>
+          <tr>
+            <td>Payment Mode </td>
+            <td>{{paymentMode}}</td>
+          </tr>
+          <tr>
+            <td>Message</td>
+            <td>{{txMsg}}</td>
+          </tr>
+          <tr>
+            <td>Transaction Time</td>
+            <td>{{txTime}}</td>
+          </tr>
+    </table>
+      <form method="GET" name="form">
+        
+        {% ifequal txStatus "SUCCESS" %}
+          <p>Click to Activate Plan</p>
+          <input type="hidden" value="{{orderId}}" name="orderId">
+          <input type="hidden" value="{{txTime}}" name="txTime">
+          <input type="hidden" value="{{txStatus}}" name="txStatus">
+          <input type="submit" value="Activate Plan">
+        {% else %}
+          <p>{{txStatus}} Go To Dashboard</p>
+          <input type="hidden" value="{{orderId}}" name="orderId">
+          <input type="hidden" value="{{txTime}}" name="txTime">
+          <input type="hidden" value="{{txStatus}}" name="txStatus">
+          <input type="submit" value="Dashboard">  
+        {% endifequal %}
+          
+      </form>
+  </div>
+</body>

@@ -1,0 +1,42 @@
+{% extends 'about/base.html' %}
+{% load static %}
+
+
+{% block metafollow %}
+<meta name="robots" content="index, follow">
+{% endblock metafollow %}
+
+{% block tilte %}Login{% endblock tilte %}
+
+{% block style %}
+    
+<link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+{% endblock style %}
+    
+{% block content %}
+    <div class="container col-1">
+            <img src="{% static 'about/imgs/logo.png'%}" alt="">    
+        {% if user.is_authenticated %}
+            <style>
+                footer{
+                    bottom: 0;
+                    position: absolute;
+                }
+            </style>
+            <h2>You are already Logged in.</h2>
+        
+            {% else %}
+
+            <div class="form-container">
+                    <h1>LOGIN</h1>
+            
+                    <form method='POST' class="form-signin">{% csrf_token %}
+                        {{form.as_p}}
+                    <input type="submit" value="Login">
+                    </form>
+                    <h3><a href="{% url 'password_reset' %}">Forgot Password ?</a></h3>
+                    <h3>Don't have an account ? <a href="{% url 'register' %}">Sign Up </a> </h3> 
+            </div>
+            {% endif %}
+    </div>
+{% endblock %}

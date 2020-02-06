@@ -1,0 +1,71 @@
+{% extends 'about/base.html' %}
+{% load static %}
+
+{% block metafollow %}
+<meta name="robots" content="index, follow">
+{% endblock metafollow %}
+
+{% block tilte %}
+Plans
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'users/css/plans.css' %}">
+<script src="https://kit.fontawesome.com/00cbc46fa1.js"></script>
+{% endblock style %}
+    
+{% block content %}
+    <section class="container box">
+            <h1 class="">SELECT YOUR PLAN</h1>
+             
+            <h2 class="">If you have the dedication to change yourself then don't wait because <br>we are much more excited than 
+            you to provide you with top class personal coaching.</h2>
+        
+        {% if show_plan %}
+            
+        <div class="col-2 plans">
+        {% for plan in Plans %}
+
+            <div class="plan">
+                <h3>{{plan.name}}</h3>
+                <div class="pnd">
+                    <div class="">
+                        <h4>Price : {{plan.cost}} INR</h4>
+                        <h4>Duration : {{plan.duration}} Weeks</h4>
+                    </div>
+                    <div class="join-btn">
+                        <a href="{% url 'checkout' %}?planid={{plan.plan_id}}">JOIN NOW</a>
+                    </div>
+                </div>
+                <p>
+                    {{plan.description | linebreaks}}
+                </p>
+                <p class="list-head">
+                    THIS PLAN INCLUDES:</p>
+                <ul>
+                    <li> <i class="fas fa-check"></i>Customized training plan according to your lifestyle</li>
+                    <li><i class="fas fa-check"></i>Customized nutrition plan according to your eating habits and other relevant constraints.</li>
+                    <li><i class="fas fa-check"></i>Full-time support on WhatsApp and email (Fast response rate)</li>
+                    <li><i class="fas fa-check"></i>Weekly check-ins</li>
+                    <li><i class="fas fa-check"></i>Fitness related support to the client.</li>
+                </ul>      
+            </div>
+            {% endfor %}
+        </div>
+            {% else %}
+                <style>
+                    footer{
+                        position: absolute;    
+                        bottom: 0;
+                    }
+                    .already_plan{
+                        text-align: center;
+                        width: 100%;
+                        padding-top: 3rem;
+                    }
+                </style>
+                <h2 class="already_plan">You already have a Plan.</h2>
+        {% endif %}
+
+    </section>
+{% endblock content%}

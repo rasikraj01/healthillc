@@ -1,0 +1,29 @@
+.tnc .container{
+    width: 50vw;
+    padding: 10rem 0 5rem;
+    font-size: 1.2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tnc h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+}
+.tnc h2,h3{
+    padding: .5rem 0;    
+}
+.tnc p{
+    padding: .5rem 0;
+    text-align: justify;
+}
+.tnc h3{
+    font-size: 2rem;
+}
+@media (max-width: 768px) {
+    .tnc .container{
+        width: 80vw;
+    }
+    .tnc h2{
+        font-size: 3rem;
+    }
+}

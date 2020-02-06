@@ -1,0 +1,21 @@
+{% extends 'about/base.html' %}
+{% load static %}
+
+{% block metafollow %}
+<meta name="robots" content="index, follow">
+{% endblock metafollow %}
+
+{% block tilte %}Logout{% endblock tilte %}
+
+{% block style %}
+    
+<link rel="stylesheet" href="{% static 'users/css/logout.css' %}">
+{% endblock style %}
+    
+{% block content %}
+<div class="container col-1">
+        <img src=" {% static 'users/imgs/logout.svg' %} " alt="">
+        <h2>You've been logged out.</h2>
+        <h3><a href="{% url 'login' %}">Click here</a> to Sign In.</h3>
+</div>
+{% endblock content %}

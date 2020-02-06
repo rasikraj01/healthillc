@@ -1,0 +1,169 @@
+.hero{
+    /* height: 100vh; */
+    font-family: 'Open Sans', sans-serif;
+}
+.hero .col-2{
+    padding: 10vh;
+    padding-bottom: 0;
+    grid-column-gap: 50px;
+}
+.main-pic{
+    position: relative;
+    align-self: center;
+}
+.main-pic img{
+    height: 45vw;
+}
+article {
+    align-self: center;
+    font-size: 1.2rem;
+}
+article a{
+    color: #02b76f;
+}
+#hello{
+    padding: 0;
+}
+article h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+}
+article p, h2{
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 10px 0;
+}
+article p span{
+    font-style: italic;
+}
+blockquote{
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #02b76f;   
+}
+
+.container-small{
+    width: 50vw;
+    margin: auto;
+}
+.journey h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-style: italic;
+    text-align: center;
+    padding: 10vh 0 5vh;
+}
+.journey blockquote{
+    text-align: center;
+    font-size: 2rem;
+}
+.journey {
+    font-size: 1.2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.journey-img{
+    width: 100%;
+}
+.journey img{
+    display: block;
+    padding: 5vh 0;
+    height: 600px;
+    margin: auto;
+}
+.journey p span{
+    font-style: italic;
+}
+
+.journey p span.highlight{
+    font-style: normal;
+    background: #65ef9996;
+}
+
+.journey p{
+    padding: .5rem 0;
+    text-align: justify;
+}
+.journey-img-large {
+    background: url('../imgs/bnw1.jpeg');
+    background-size: cover;
+    width: 100%;
+    height: 40vw;
+    margin: 3rem 0 ;
+}
+
+@media (max-width: 1024px) {
+    .container-small{
+        width: 70vw;
+    }
+    .journey img{
+        height: 400px;
+    }
+    .main-pic img {
+        height: 50vw;
+    }
+    article p, h2 {
+        font-size: .8rem;
+        padding: 8px 0;
+    }
+    blockquote{
+        font-size: 1rem;
+    }
+
+  }
+
+@media (max-width: 768px) {
+    .container-small{
+        width: 70vw;
+    }
+
+    .main-pic{
+        display: none;
+    }
+    article p, h2 {
+        font-size: 1.1rem;
+        padding: 10px 0;
+    }
+    blockquote{
+        font-size: 1.5rem;
+    }
+    .journey img{
+        height: 330px;
+    }
+
+    .hero .col-2{
+        padding: 15vh 0 0;
+    }
+
+    .col-2{
+        padding: 15vh 0 0;
+        display: block;
+    }
+  }
+@media (max-width: 425px) {
+    .container-small{
+        width: 75vw;
+    }
+    .main-pic{
+        display: none;
+    }
+    .journey{
+        font-size: 1.1rem;
+    }
+    .journey img{
+        padding: 2vh 0;
+        height: 250px;
+    }
+    .hero .col-2{
+        padding: 10vh 0 0;
+    }
+    article h1{
+        font-size: 3rem;
+    }
+    .journey h2{
+        font-size: 3rem;
+    }
+    .col-2{
+        padding: 10vh 0 0;
+        display: block;
+    }
+}

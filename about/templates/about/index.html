@@ -1,0 +1,223 @@
+{% extends 'about/base.html' %}
+{% load static %}
+
+
+{% block metafollow %}
+<meta name="robots" content="index, follow">
+{% endblock metafollow %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'about/css/index.css' %}">          
+{% endblock style %}
+
+
+  
+{% block content %}
+<section class="hero">
+    <div class="container col-2">
+      <div class="content">
+
+    <div class="graphic-tab">
+        <img src="{% static 'about/imgs/trainer.svg' %}">
+      </div>
+        <p>
+        GET YOUR!
+        <br>
+        <span> PERSONAL COACHING TODAY</span>
+        </p>
+        <div class="thin">SELECT THE PLAN THAT SUITS YOU</div>
+        <a href="{% url 'plans' %}" class="hero-button">
+          JOIN NOW
+        </a> 
+      </div>
+  
+    <div class="graphic">
+        <img src="{% static 'about/imgs/trainer.svg' %}">
+      </div>
+    </div>
+  </section>
+  <section class="about-company">
+    <div class="container col-1 ">
+      <h2>HEALTHILLC</h2>
+      <img src="{% static 'about/imgs/logo-home.png'%}" alt="">
+      <div class="info">
+        <p>
+            Healthillc provides you with the best online personal
+            coaching plan to achieve your goals and be an
+            inspiration for others.
+            We don’t believe in giving individual diet or training
+            plans because according to us guidance is the most
+            important aspect and providing just a diet or training
+            plan ultimately makes you feel alone amidst all the
+            scattered knowledge over the internet.
+        </p>
+      </div>
+      <h3>HOW WE ARE <span>DIFFERENT</span></h3>
+      <div class="info-1">
+          <p>
+              Our personal coaching initiative is meant to serve those who can’t
+              afford expensive coaches and we believe they at least deserve a
+              chance to transform themselves.
+          </p><p>   
+              We offer the <span>best prices</span> in the market for personal coaching and if
+              you don’t believe then give your full effort in finding one that offers
+              better than ours.
+          </p><p>    
+              We don’t provide a workout or diet plans individually as we believe
+              they are incomplete without a proper coach and guidance thus only
+              Personal Coaching. If you are looking for just plans then there are
+              plenty of them available out there.
+          </p>
+      </div>
+    </div>
+  </section>
+  <section class="getting-started">
+    <div class="container col-3">
+        <h2>GETTING <span>STARTED</span></h2>
+        <div class="step choose">
+          <div class="illustration">
+            <img src="{% static 'about/imgs/choose.svg' %} " alt="">
+          </div>
+          <h3>CHOOSE</h3>
+          <p class="desc">
+              Select a plan according to your needs and if you
+              are not sure then do contact us on email to let us
+              help you.
+          </p>
+        </div>
+        <div class="step pay">
+            <div class="illustration">
+            <img src="{% static 'about/imgs/finish.svg' %} " alt="">
+            </div>
+            <h3>PAY</h3>
+            <p class="desc">
+                Use your healthillc account to check out from our
+                secured payment gateway and be ready to begin
+                your amazing journey!
+            </p>
+        </div>
+        <div class="step contact">
+          <div class="illustration">
+              <img src="{% static 'about/imgs/call.svg' %} " alt="">
+          </div>
+          <h3>CONTACT</h3>
+          <p class="desc">
+              Your coach will be contacting you within 24hours.
+              You can see your current active plan in your
+              profile.
+          </p>
+      </div>
+    </div>
+  </section>
+  <section class="how-it-works fluid-container">
+      <h2>HOW DOES IT <span>WORK</span></h2>
+      <ul>
+        <li>
+            <div class="circle">1</div>
+            <div class="item">
+                We evaluate your medical history before we
+                    proceed further to give you a customized diet as
+                    well as a training plan.
+            </div>
+        </li>
+        <li>
+            <div class="circle">2</div>
+            <div class="item"> 
+              Understand your lifestyle and other needs before giving
+              you your personalized diet and training plan.
+            </div>
+        </li>
+        <li>
+            <div class="circle">3</div>
+            <div class="item">
+              Get all your body details to design a perfect plan for you.
+            </div>
+        </li>
+        <li>
+            <div class="circle">4</div>
+            <div class="item">
+              Weekly check-ins on your progress.
+            </div>
+        </li>
+        <li>
+            <div class="circle">5</div>
+            <div class="item">
+                Adjust your plans according to how your body is responding.
+            </div>
+        </li>
+        <li>
+          <div class="circle">6</div>
+          <div class="item">
+              We will keep on providing you essential nutrition
+              and diet knowledge so you can even learn on your
+              journey.
+          </div>
+        </li>
+        <li>
+          <div class="circle">7</div>
+          <div class="item">
+              At last, we will motivate you too with full-time
+              WhatsApp support!    
+          </div>
+        </li>
+      </ul>
+  </section>
+  <section class="testimonials">
+    <div class="container">
+    <h2>TESTIMONIALS</h2>
+        <ul class="slides">
+          <li class="slide slide1">
+            <div class="inner-slide">
+                <blockquote>
+                    If motivation (his biggest strength), flexibility in what you want to eat and still lose fat(YES it&#39;s true!)
+                    and a very personal approach as he listens to what you want and understands your problems too,
+                    then Deepanshu is the man for you! He definitely knows what he is doing so believe me just listen to
+                    him and you will come out with success.
+                </blockquote>
+                <h5>-Reyaansh</h5>
+            </div>
+          </li>
+          <li class="slide slide2">
+            <div class="inner-slide">
+                <blockquote>
+                    With Healthillc's help, support and guidance I have taken back control of my body.
+                    Now I am more concerned about the quality of the food that I eat. 
+                    I’ve lost 8 kgs in just two months, but more importantly, I feel really good!
+                    <br>
+                    My workouts and nutrition plans were personalized to me and if something wasn't working, they would make a change. 
+                    I highly recommend Healthillc to anyone looking for a healthier lifestyle without sacrificing lifestyle.
+                </blockquote>
+                <h5>-Sourabh</h5>
+            </div>
+          </li>
+          <li class="slide slide3">
+            <div class="inner-slide">
+                <blockquote>
+                    So finally! One day I made the decision that I need to lose some weight & I got in touch with the coach Deepanshu Gaur from Healthillc. 
+                    It was always difficult for a person like me to do any diet but I got a pretty sustainable diet and a great workout plan.
+                    Whenever I used to message him my queries I always got a quick and humble reply from him no matter how many times I do the same.
+                    <br>
+                    It was one of my best decision.
+                </blockquote>
+                <h5>-Vaibhav dahiya</h5>
+            </div>
+          </li>
+          <li class="slide slide4">
+            <div class="inner-slide">
+                <blockquote>
+                    His immense knowledge and motivational attitude made me a huge fan of him and made me buy his program. 
+                    Fast forward it to a few months later, never in my wildest dreams I had imagined myself like this. 
+                    The change was huge. His nutrition, training, and supplement guidance made a night and day difference in my physique. 
+                    Never imagined that someone could train you with such seriousness and dedication. Be it in the gym or at home, he was always available spontaneously. 
+                    Also, now I’m able to manipulate everything by myself and stay in shape 365 days a year! 
+                </blockquote>
+                <h5>- Piyush Malik</h5>
+              </div>
+          </li>
+          <li class="slide slide1">
+          </li>
+        </ul>
+    </div>
+  </section>
+{% endblock content %}
+  

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,800i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600&display=swap');
+body{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+nav{
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e); 
+    background: linear-gradient(to right, #38ef7d, #11998e);
+
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+}
+
+.title{
+    position: absolute;
+    left: 5rem;
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+}
+.title img{
+    height: 50px;
+    line-height: 50px;
+    padding: 5px 10px;
+}
+.title h1{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 60px;
+    color: white;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    padding-top: 8rem;
+    width: 60vw;
+    margin: auto;
+    justify-content: center;
+    justify-items: center;
+}
+h2{
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+table{
+    padding-top: 2rem;
+    border-collapse: collapse;
+    margin: auto;
+}
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+form{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+input[type="submit"]
+    {outline: none;
+    width: 150px;
+    height: 40px;
+    padding-left: 15px;
+    border: 2px solid #7E57C2;
+    font-size: 1rem;
+	border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top:1rem;
+    background: #7E57C2;
+    color: #fff;
+    padding: 10px;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+}
