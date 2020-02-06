@@ -136,6 +136,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'rasikrajtest@gmail.com'
 EMAIL_HOST_PASSWORD = 'bringmethanos6'
-
-#help.healthillc@gmail.com
-#supportforpeople@123
